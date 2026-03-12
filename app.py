@@ -81,7 +81,7 @@ def main(page: ft.Page):
         ], alignment=ft.MainAxisAlignment.CENTER)
         
         keypad_row4 = ft.Row([
-            ft.ElevatedButton("", width=80, height=60),
+            ft.ElevatedButton("", width=80, height=60, on_click=number_click, data="*"),
             ft.ElevatedButton("0", width=80, height=60, on_click=number_click, data="0"),
             ft.ElevatedButton("⌫", width=80, height=60, on_click=clear_pin),
         ], alignment=ft.MainAxisAlignment.CENTER)
@@ -188,5 +188,6 @@ def main(page: ft.Page):
         show_login_view()
 
     show_login_view()
+
 
 ft.app(target=main)
